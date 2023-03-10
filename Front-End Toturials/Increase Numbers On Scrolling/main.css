@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+  background-color: #eee;
+}
+.one {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.two {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ccc;
+}
+
+.three {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.four {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ccc;
+}
+
+.nums {
+  display: flex;
+}
+
+.nums .num {
+  flex: 1;
+  text-align: center;
+  font-size: 40px;
+  padding: 20px;
+}

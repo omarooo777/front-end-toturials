@@ -1,0 +1,45 @@
+body {
+  background-color: black;
+  font-family: "Cairo", sans-serif;
+}
+
+div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div::after {
+  content: "";
+  background: white;
+  position: absolute;
+  width: 50px;
+  height: 100%;
+  left: 0;
+  animation: move 4s infinite linear;
+  z-index: -1;
+}
+
+div span {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  line-height: 1;
+  font-size: 40px;
+  mix-blend-mode: difference;
+}
+
+@keyframes move {
+  0%,
+  100% {
+    left: 0;
+  }
+  50% {
+    left: calc(100% - 50px);
+  }
+}
+
+div span::selection {
+  background-color: transparent;
+}

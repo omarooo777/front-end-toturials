@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  background-color: white;
+  font-family: "Cairo", sans-serif;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 375px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 0 10px #ddd inset;
+}
+
+.card-img {
+  background-color: #0075ff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+  border-radius: 5px;
+}
+
+.card-img span {
+  font-size: 50px;
+}
+
+.title-card {
+  position: relative;
+  text-align: center;
+  top: -20px;
+}
+
+.background {
+  width: 250%;
+  height: 100%;
+  background: #0075ff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%) skew(0, -10deg);
+  z-index: -1;
+  border-radius: 50%;
+  position: fixed;
+  animation: wave 10s infinite ease-in-out alternate;
+}
+
+@keyframes wave {
+  from {
+    transform: translate(-50%) skew(0, -10deg);
+  }
+  to {
+    transform: translate(-30%) skew(10deg, 0);
+  }
+}
