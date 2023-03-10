@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void removeCharFromString(char *p,char c){
+    if(NULL==p)
+    return;
+    char * pDest = p;
+    while(*p){
+        if(*p!=c)
+            *pDest++=*p;
+        p++;
+    }
+    *pDest='\0';
+}
+
+int main(){
+    char str[]="WUBWUBABCWUB";
+    removeCharFromString(str,'W');
+    //removeCharFromString(str,'U');
+    //removeCharFromString(str,'B');
+    cout<<str;
+
+
+
+    return 0;
+}

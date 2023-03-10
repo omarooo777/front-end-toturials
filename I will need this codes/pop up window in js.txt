@@ -1,0 +1,118 @@
+HTML:-
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/logo.png" />
+    <title>test pag html, css and js</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+  <button id="btn">Click Here</button>
+    <script src="./main.js"></script>
+  </body>
+</html>
+
+CSS:-
+
+body {
+  background: #c5c5aa;
+}
+
+.container {
+  width: 100%;
+  height: 530px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s;
+}
+
+.advert {
+  width: 50%;
+  height: 60%;
+  background: #ede9e4;
+  border-radius: 10px;
+  font-family: system-ui;
+  border: 3px solid black;
+}
+
+.text {
+  margin-left: 15px;
+}
+
+.text::after {
+  content: "";
+    border-bottom: 3px solid black;
+    margin-left: 10px;
+    width: calc(100% + 15px);
+    display: inherit;
+    position: relative;
+    left: -25px;
+    top: 15px;
+}
+
+.x {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 165px;
+  right: 195px;
+  cursor: pointer;
+}
+
+.x::after {
+  content: "";
+  border: 1px solid;
+  color: black;
+  width: 15px;
+  transform: rotate(135deg);
+  position: absolute;
+}
+
+.x::before {
+  content: "";
+  border: 1px solid;
+  color: black;
+  width: 15px;
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+
+JS:-
+
+let btn = document.getElementById("btn");
+
+let container = document.createElement("div");
+btn.onclick = function () {
+  
+  container.innerHTML = ''
+  document.body.style.cssText = "background:rgba(0,0,0,0.7);";
+
+  container.classList.add("container");
+
+  let advert = document.createElement("div");
+  advert.classList.add("advert");
+
+  let h3 = document.createElement("h3");
+  h3.classList.add("text");
+
+  let text = document.createTextNode("Google Adverts :");
+
+  let x = document.createElement("div");
+  x.classList.add("x");
+
+  x.onclick = function () {
+    advert.parentElement.remove()
+    document.body.style.background = "#c5c5aa"
+  }
+
+  h3.appendChild(text);
+  advert.appendChild(h3);
+  advert.appendChild(x);
+  container.appendChild(advert);
+  document.body.appendChild(container);
+};

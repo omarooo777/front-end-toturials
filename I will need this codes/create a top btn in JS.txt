@@ -1,0 +1,39 @@
+HTML:-
+
+<button id="btn">Top</button>
+
+CSS:-
+
+#btn {
+  width: 60px;
+  height: 50px;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  font-size: 20px;
+  font-family: sans-serif;
+  background: #d51313;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  display: none;
+  cursor: pointer;
+}
+
+JS:-
+
+let btn = document.getElementById("btn");
+
+btn.onclick = function() {
+  window.scrollTo({
+  top:0,
+  behavior: "smooth"
+  })
+}
+
+window.onscroll = function() {
+  if (window.scrollY >= 1000) {
+    btn.style.display = "block"
+  } else 
+  btn.style.display = "none"
+}

@@ -1,0 +1,9 @@
+let myInfo = {
+  username: "Osama",
+  role: "Admin",
+  country: "Egypt",
+};
+
+let test = Object.entries(myInfo).forEach(([key, value]) => {
+  console.log(`${key}: ${value}`)
+}) 
