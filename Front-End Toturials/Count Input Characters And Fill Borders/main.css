@@ -1,0 +1,35 @@
+form {
+  width: 300px;
+  margin: 20px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-input {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #d9d0d0;
+  background-color: #eee;
+  padding: 15px;
+}
+
+.count {
+  text-align: right;
+  padding-top: 10px;
+}
+
+.count.zero {
+  color: red;
+  font-weight: bold;
+  transition: .5s;
+}
+
+.progress {
+  width: 0;
+  height: 2px;
+  position: relative;
+  top: -2px;
+  background: #2196f3;
+  transition: .5s;
+}

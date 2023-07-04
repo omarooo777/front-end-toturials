@@ -1,0 +1,42 @@
+body {
+  background-color: #333;
+  font-family: "Work Sans";
+}
+
+.link {
+  color: #8bc34a;
+  text-decoration: none;
+  width: 140px;
+  margin: 20px auto;
+  border: 3px solid #8bc34a;
+  position: relative;
+  display: block;
+  text-align: center;
+  line-height: 36px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.link::after {
+  content: attr(data-text);
+  position: absolute;
+  width: 100%;
+  display: block;
+  top: 0;
+  left: 0;
+  transition: .3s;
+  transform: translateX(-100%);
+}
+
+.link span {
+  display: block;
+  transition: .3s;
+}
+
+.link:hover::after {
+  transform: translateX(0)
+}
+
+.link:hover span {
+  transform: translateX(100%);
+}

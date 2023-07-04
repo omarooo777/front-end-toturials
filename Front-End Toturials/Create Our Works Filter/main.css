@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.switch {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 20px auto;
+  width: fit-content;
+  background: #f44336;
+  color: white;
+  font-size: 20px;
+}
+
+.switch li {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.switch li:not(:last-child) {
+  border-right: 2px solid white;
+}
+
+.switch li:hover,
+.switch li.active {
+  background-color: #cb1b0f;
+}
+
+.gallery {
+  width: 650px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gallery img {
+  width: 200px;
+  position: relative;
+  transition: all .3s linear;
+}

@@ -1,0 +1,51 @@
+form {
+  width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #eee;
+}
+
+form > div {
+  position: relative;
+  margin: 5px;
+}
+
+input[type = "radio"] {
+  appearance: none;
+}
+
+form label::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  border: 1px solid #0075ff;
+  left: 0;
+  background-color: white;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+input[type = "radio"]:checked + label::before,
+input[type = "radio"]:not(:checked):hover + label::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #0075ff;
+  position: absolute;
+  left: 4px;
+  z-index: 2;
+  top: 4.5px;
+}
+
+input[type = "radio"]:not(:checked):hover + label::before {
+  opacity: .2;
+}
+
+input[type = "radio"]:checked + label {
+  color: #0075ff;
+}
+
+form label {
+  padding-left: 10px;
+}

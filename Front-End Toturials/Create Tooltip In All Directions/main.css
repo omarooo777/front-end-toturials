@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: "Work Sans";
+}
+
+button {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  border: none;
+  font-size: 40px;
+  outline: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+button span {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  min-width: 200px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  opacity: 0;
+  transition: .5s
+}
+
+button span::after {
+  content: "";
+  position: absolute;
+  border: 10px solid;
+  border-color: #333 transparent transparent;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+button:hover {
+  overflow: visible;
+}
+
+button:hover span {
+  opacity: 1;
+}
+
+[data-position="bottom"] span{
+  bottom: -60px;
+  top: auto;
+}
+
+[data-position="bottom"] span::after {
+  top: -20px;
+  bottom: auto;
+  border-color: transparent transparent #333  ;
+}

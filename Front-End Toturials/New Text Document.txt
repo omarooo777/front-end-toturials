@@ -1,0 +1,12 @@
+const uniqueValues = new Set();
+
+function uV(limit, totalValues) {
+  do { uniqueValues.add(Number((Math.random() * limit).toFixed()))  }
+    while ( uniqueValues.size < totalValues)
+
+  return Array.from(uniqueValues);
+}
+
+uV(3, 4)
+let z = Array.from(uniqueValues).map((e) => e + 1)
+console.log(z);

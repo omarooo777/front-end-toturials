@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <meta charset="UTF-8" /> -->
+    <title>custom audio player</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+  </head>
+  <body>
+    <div class="audio-container">
+      <div class="player">
+        <div>
+          <input type="range" value="0">
+          <div></div>
+        </div>
+        <span>Start</span>
+        <span>End</span>
+      </div>
+      <div class="player-control">
+        <i class="fas fa-backward" id="backward"></i>
+        <i class="fas fa-pause" id="play-pause"></i>
+        <i class="fas fa-forward" id="forward"></i>
+      </div>
+      <div class="sound-control">
+        <i class="fas fa-volume-down"></i>
+        <input type="range" max="100" step="1">
+        <i class="fas fa-volume-up"></i>
+      </div>
+      <audio src="./audio/Biene Maya (Remastered).mp4"></audio>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

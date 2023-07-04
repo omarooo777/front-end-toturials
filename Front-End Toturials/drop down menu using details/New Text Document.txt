@@ -1,0 +1,113 @@
+html
+
+
+<details class="custom-select">
+        <summary class="radios">
+          <input
+            type="radio"
+            name="item"
+            id="default"
+            title="Choose Your Level"
+            checked
+          />
+          <input type="radio" name="item" id="easy" title="Easy" />
+          <input type="radio" name="item" id="normal" title="Normal" />
+          <input type="radio" name="item" id="medium" title="Medium" />
+          <input type="radio" name="item" id="hard" title="Hard" />
+        </summary>
+        <ul class="list">
+          <li><label for="easy">Easy<span></span></label></li>
+          <li><label for="normal">Normal</label></li>
+          <li><label for="medium">Medium</label></li>
+          <li><label for="hard">Hard</label></li>
+        </ul>
+      </details>
+
+
+
+css
+
+
+
+details {
+  position: relative;
+  width: 190px;
+  margin: 50px auto;
+}
+
+details[open] {
+  z-index: 1;
+}
+
+summary {
+  cursor: pointer;
+  padding: 10px;
+  list-style: none;
+  border-radius: 5px;
+  background-color: var(--paragraphColor);
+  position: relative;
+  outline: none;
+  min-height: 18px;
+}
+
+summary::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg) translate(50%);
+  border-bottom: 1px solid #111111;
+  border-left: 1px solid #111111;
+  border-bottom-left-radius: 2px;
+  transition: transform .1s ease-in-out;
+}
+
+details[open] summary::after {
+  transform: rotate(-45deg) translate(0);
+}
+
+details ul {
+  width: 100%;
+  position: absolute;
+  top: calc(100% + 5px);
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: var(--paragraphColor);
+  margin: 0;
+  padding: 20px;
+}
+
+details ul li {
+  margin: 0;
+  padding: 1rem 0;
+  border-bottom: 1px solid #767575;
+  list-style: none;
+}
+
+
+details ul li:first-child {
+  padding-top: 0;
+}
+details ul li:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+details ul li label {
+  cursor: pointer;
+}
+
+input[type=radio] {
+  appearance: none;
+  display: none;
+}
+
+input[type=radio]:checked {
+  display: inline;
+}
+
+input[type=radio]::after {
+  content: attr(title);
+  display: inline;
+}

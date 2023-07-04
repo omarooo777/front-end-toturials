@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+.card-box {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+  width: 200px;
+}
+.face {
+  position: absolute;
+  backface-visibility: hidden;
+}
+.face.back {
+  transform: rotateY(180deg);
+}
+.card-box.rotate {
+  transform: rotateY(180deg);
+}
+
+.btn {
+  top: 210px;
+  position: relative;
+}
